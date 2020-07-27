@@ -4,7 +4,8 @@ abstract class BasePageWidget extends StatefulWidget {
   const BasePageWidget({Key key}) : super(key: key);
 }
 
-class BasePageState<T extends BasePageWidget> extends State<T> with WidgetsBindingObserver, AutomaticKeepAliveClientMixin {
+class BasePageState<T extends BasePageWidget> extends State<T>
+    with WidgetsBindingObserver, AutomaticKeepAliveClientMixin {
   static const int singleView = 1;
 
   var _appInForeground;
@@ -161,8 +162,9 @@ class BasePageState<T extends BasePageWidget> extends State<T> with WidgetsBindi
 
     // Build Layout
     int tabViewCount = getTabViewCount();
-    Widget content =
-        tabViewCount > singleView ? DefaultTabController(length: tabViewCount, child: buildLayout()) : buildLayout();
+    Widget content = tabViewCount > singleView
+        ? DefaultTabController(length: tabViewCount, child: buildLayout())
+        : buildLayout();
     return WillPopScope(
       onWillPop: onBack,
       child: content,

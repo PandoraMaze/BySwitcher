@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightGreen,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'BySwitcher Demo'),
     );
   }
 }
@@ -37,13 +37,7 @@ class _MyHomePageState extends BasePageState<MyHomePage> {
 
   @override
   String getTitle() {
-    // TODO: implement getTitle
     return 'Switcher Demo';
-  }
-
-  @override
-  void initParams() {
-    super.initParams();
   }
 
   @override
@@ -100,7 +94,8 @@ class _MyHomePageState extends BasePageState<MyHomePage> {
               activeTrackColor: Colors.cyan,
               inactiveTrackColor: Color(0xFFE7E6E9),
               thumb: Icon(Icons.sentiment_neutral, color: Colors.cyan),
-              inactiveFlag: Icon(Icons.sentiment_dissatisfied, color: Colors.red),
+              inactiveFlag:
+                  Icon(Icons.sentiment_dissatisfied, color: Colors.red),
               activeFlag: Icon(Icons.sentiment_satisfied, color: Colors.white),
               state: _switchState,
               onChanged: (targetState) {

@@ -133,7 +133,6 @@ class BySwitcher extends StatefulWidget {
     @required this.onChanged,
     this.onLoading,
     this.state = SwitchState.INACTIVE,
-    this.hasLoadingState = true,
     this.onTap,
     this.width = SwitcherStyle.width,
     this.height = SwitcherStyle.height,
@@ -149,7 +148,8 @@ class BySwitcher extends StatefulWidget {
     this.progressColor,
     this.progressImg,
     this.progress,
-  })  : assert(!hasLoadingState || (hasLoadingState && onLoading != null)),
+  })  : assert(onLoading != null),
+        this.hasLoadingState = true,
         super(key: key);
 
   @override
@@ -165,8 +165,8 @@ class _BySwitcherState extends State<BySwitcher> with TickerProviderStateMixin {
 
   bool get _enabled => widget.onChanged != null;
 
-  bool _isDragging = false;
-  bool _needsMoveAnimation = false;
+//  bool _isDragging = false;
+//  bool _needsMoveAnimation = false;
 
   double _toggleOpacity;
   double _reactionOpacity = 0.0;
@@ -244,8 +244,8 @@ class _BySwitcherState extends State<BySwitcher> with TickerProviderStateMixin {
     }
 
     if (_enabled) {
-      _needsMoveAnimation = false;
-      _isDragging = true;
+//      _needsMoveAnimation = false;
+//      _isDragging = true;
       _doReaction(true);
     }
   }
@@ -268,9 +268,6 @@ class _BySwitcherState extends State<BySwitcher> with TickerProviderStateMixin {
     if (inLoading()) {
       return;
     }
-
-    _isDragging = false;
-    _needsMoveAnimation = true;
     _doReaction(false);
 
     // Call onChanged when the user's intent to change value is clear.

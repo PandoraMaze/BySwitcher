@@ -1,7 +1,9 @@
 name: byswitcher
 description: A Switch Button for Flutter. Pure Dart Code. Loading State Included. Customize Thumb Image Supported.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/PandoraMaze/BySwitcher
+
+publish_to: 'https://pub.dartlang.org'
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

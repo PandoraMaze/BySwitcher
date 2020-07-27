@@ -1,5 +1,5 @@
 # BySwitcher
-[![pub package](https://img.shields.io/badge/pub-v1.0.0-brightgreen?style=flat&logo=flutter)](https://pub.dev/packages/byswitcher) 
+[![pub package](https://img.shields.io/badge/pub-v1.0.1-brightgreen?style=flat&logo=flutter)](https://pub.dev/packages/byswitcher) 
 [![author](https://img.shields.io/badge/author-:byk-4189d5?style=flat&logo=github)](https://github.com/bluesofy)
 
 A Switch Button for Flutter.
@@ -13,7 +13,7 @@ A Switch Button for Flutter.
 ### Add Dependency
 ```yaml
 dependencies:
-  byswitcher: ^1.0.0
+  byswitcher: ^1.0.1
 ```
 
 ### Usage
@@ -26,6 +26,3 @@ child: BySwitcher();
 /// Has Loading State Default 
 child: BySwitcher.loading();
 ```
-
-## Support or Contact
-- E-Mail: <bluesofy@live.cn>
